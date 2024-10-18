@@ -9,15 +9,16 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 /* Reduces the line height of heading elements and wraps their text in a way that best balances the number of characters on each line, enhancing layout quality and legibility. */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   text-wrap: balance;
 }
@@ -32,7 +33,6 @@ nav a {
   text-decoration: none;
   position: relative;
 }
-
 
 /* Hover effect for links */
 nav ul li a::after {
@@ -51,12 +51,7 @@ nav ul li a:hover::after {
   width: 100%; /* Fills the entire width on hover */
 }
 
-/* Underlines the navigation links on hover.
-nav a:hover {
-  text-decoration: underline;
-} */
-
-/* Underlines the active navigation link. */
+/* highlights current page with colour */
 [aria-current="page"] {
   color: #ff004f;
 }
@@ -127,16 +122,12 @@ nav ul li a {
   margin: 20px;
 }
 
-@font-face {
-  font-family: mainfont;
-  src: url("https://fonts.googleapis.com/css2?family=Aboreto&family=Roboto:wght@100&display=swap");
-}
-
 div {
   font-family: mainfont;
 }
 
-.mission {
-  padding: 20px;
-  margin-top: -20px;
+.Personal-life {
+  margin-left: 40px;
+  margin-right: 70px;
 }
+
