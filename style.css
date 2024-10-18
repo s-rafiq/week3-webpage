@@ -30,14 +30,95 @@ img {
 /* Removes the underline from the navigation links. */
 nav a {
   text-decoration: none;
+  position: relative;
 }
 
-/* Underlines the navigation links on hover. */
+
+/* Hover effect for links */
+nav ul li a::after {
+  content: '';
+  width: 0%;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: width 0.5s; /* Smooth animation for the underline */
+}
+
+/* Extend underline on hover */
+nav ul li a:hover::after {
+  width: 100%; /* Fills the entire width on hover */
+}
+
+/* Underlines the navigation links on hover.
 nav a:hover {
   text-decoration: underline;
-}
+} */
 
 /* Underlines the active navigation link. */
 [aria-current="page"] {
-  text-decoration: underline;
+  color: #ff004f;
+}
+
+.mainpic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;   /* Height of the footer */
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 40px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin: 25px;
+  padding: 0;
+}
+
+#header a {
+  margin: 0;
+  color: #ff004f;
+  text-decoration: none;
+}
+
+nav ul li {
+  margin: 0 17px;
+}
+
+nav ul li a {
+  color: #636363;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.quote {
+  color: #636363;
+  margin: 20px auto;
+  font-size: 40px;
+  text-align: center;
+
+}
+
+#steve-jobs {
+  text-align: right;
+  color: #636363;
+  margin: 20px auto;
+  font-size: 40px;
+  margin: 20px;
 }
